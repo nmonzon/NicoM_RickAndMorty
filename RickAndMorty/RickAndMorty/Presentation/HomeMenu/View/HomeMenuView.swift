@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct HomeMenuView: View {
+    
+    @ObservedObject private var viewModel: HomeMenuViewModel
+    
+    init(viewModel: HomeMenuViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if viewModel.showLoadingSpinner {
+                ProgressView().progressViewStyle(.circular)
+            } else {
+                Text(viewModel.homeList?.characters ?? "a")
+            }
+        }
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 
-#Preview {
-    HomeMenuView()
-}
