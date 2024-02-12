@@ -10,7 +10,7 @@ import Foundation
 class HomeMenuViewModel: ObservableObject {
     
     @Published var showLoadingSpinner: Bool = false
-    @Published var homeList: HomeMenu?
+    @Published var homeList: [HomeMenuItem] = []
     private let getHomeMenuList: GetHomeMenuListType
     
     init(getHomeMenuList: GetHomeMenuListType) {

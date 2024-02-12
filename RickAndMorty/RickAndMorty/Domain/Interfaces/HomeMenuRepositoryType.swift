@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeMenuRepositoryType {
-    func getHomeMenuList() async -> Result<HomeMenu, HomeDomainError>
+    func getHomeMenuList() async -> Result<[HomeMenuItem], HomeDomainError>
 }

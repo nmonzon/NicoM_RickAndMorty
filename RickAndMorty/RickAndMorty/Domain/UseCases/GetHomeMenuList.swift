@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetHomeMenuListType {
-    func execute() async -> Result<HomeMenu, HomeDomainError>
+    func execute() async -> Result<[HomeMenuItem], HomeDomainError>
 }
 
 class GetHomeMenuList: GetHomeMenuListType {
@@ -19,7 +19,7 @@ class GetHomeMenuList: GetHomeMenuListType {
         self.repository = repository
     }
     
-    func execute() async -> Result<HomeMenu, HomeDomainError> {
+    func execute() async -> Result<[HomeMenuItem], HomeDomainError> {
         
         let homeMenuResult = await repository.getHomeMenuList()
         

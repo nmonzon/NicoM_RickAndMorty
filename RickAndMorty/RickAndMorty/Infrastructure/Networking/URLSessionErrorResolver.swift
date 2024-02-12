@@ -9,7 +9,7 @@ import Foundation
 
 class URLSessionErrorResolver {
     func resolve(statusCode: Int) -> HTTPClientError {
-        guard statusCode < 500 else {
+        guard statusCode >= 400 && statusCode < 500 else {
             return .clientError
         }
         return .serverError

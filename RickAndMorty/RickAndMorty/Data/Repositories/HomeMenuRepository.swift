@@ -17,14 +17,14 @@ class HomeMenuRepository: HomeMenuRepositoryType {
         self.homeErrorMapper = homeErrorMapper
     }
     
-    func getHomeMenuList() async -> Result<HomeMenu, HomeDomainError> {
+    func getHomeMenuList() async -> Result<[HomeMenuItem], HomeDomainError> {
         let homeResult = await datasource.getHomeMenuDatasourceData()
         
         guard case .success(let homeList) = homeResult else {
             return .failure(homeErrorMapper.map(error: homeResult.failureValue as? HTTPClientError))
         }
         
-        return .success(HomeMenu(characters: homeList.characters, locations: homeList.locations, episodes: homeList.episodes))
+        return .success(homeList.toDomain())
     }
     
 }

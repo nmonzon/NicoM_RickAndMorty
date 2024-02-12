@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct HomeMenu: Codable {
-    let characters: String
-    let locations: String
-    let episodes: String
+struct HomeMenuItem: Codable, Hashable {
+    let title: String
+    let url: String
 }
