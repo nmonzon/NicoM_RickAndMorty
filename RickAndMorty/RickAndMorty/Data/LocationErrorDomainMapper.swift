@@ -1,0 +1,16 @@
+//
+//  LocationErrorDomainMapper.swift
+//  RickAndMorty
+//
+//  Created by Nicolas Monzon on 12/2/2024.
+//
+
+import Foundation
+
+class LocationErrorDomainMapper {
+    func map(error: HTTPClientError) -> HomeDomainError {
+        return .generic
+    }
+    
+}
+

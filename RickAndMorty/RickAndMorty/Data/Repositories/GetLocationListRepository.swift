@@ -23,14 +23,14 @@ class GetLocationListRepository: GetLocationListRepositoryType {
         
         let LocationListResult = await LocationListDatasource.getLocationList()
         
-        guard case .success(let LocationList) = LocationListResult else {
+        guard case .success(let locationList) = LocationListResult else {
             guard case .failure(let error) = LocationListResult else {
                 return .failure(.generic)
             }
             return .failure(LocationDomainErrorMapper.map(error: error))
 
         }
-        return .success(LocationDomainMapper.toDomain(Locations: LocationList))
+        return .success(LocationDomainMapper.toDomain(locations: locationList))
 
     }
     
