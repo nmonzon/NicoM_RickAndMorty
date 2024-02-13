@@ -1,13 +1,13 @@
 //
-//  Character.swift
+//  CharacterDetailItem.swift
 //  RickAndMorty
 //
-//  Created by Nicolas Monzon on 10/2/2024.
+//  Created by Nicolas Monzon on 12/2/2024.
 //
 
 import Foundation
 
-struct Character {
+struct CharacterDetailItem: Identifiable {
     
     let id: Int
     let name: String
@@ -21,6 +21,5 @@ struct Character {
     let episode: [String]
     let url: String
     let created: String
-    
     
 }

@@ -11,10 +11,15 @@ class HomeMenuRepository: HomeMenuRepositoryType {
     
     private let homeErrorMapper: HomeErrorMapper
     private let datasource: HomeMenuDatasourceType
+    private let homeMenuDomainMapper: HomeMenuDomainMapper
     
-    init(datasource: HomeMenuDatasourceType, homeErrorMapper: HomeErrorMapper) {
+    init(datasource: HomeMenuDatasourceType, 
+         homeErrorMapper: HomeErrorMapper,
+         homeMenuDomainMapper: HomeMenuDomainMapper
+    ) {
         self.datasource = datasource
         self.homeErrorMapper = homeErrorMapper
+        self.homeMenuDomainMapper = homeMenuDomainMapper
     }
     
     func getHomeMenuList() async -> Result<[HomeMenuItem], HomeDomainError> {
@@ -24,7 +29,7 @@ class HomeMenuRepository: HomeMenuRepositoryType {
             return .failure(homeErrorMapper.map(error: homeResult.failureValue as? HTTPClientError))
         }
         
-        return .success(homeList.toDomain())
+        return .success(homeMenuDomainMapper.toDomain(homeMenuDTO: homeList))
     }
     
 }

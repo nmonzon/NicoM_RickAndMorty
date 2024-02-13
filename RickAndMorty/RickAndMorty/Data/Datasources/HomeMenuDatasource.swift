@@ -21,7 +21,7 @@ class HomeMenuDatasource: HomeMenuDatasourceType {
                                 queryParameters: [:],
                                 method: .get)
         
-        let homeResult = await httpClient.makeRequest(endpoint: endpoint, baseUrl: "https://rickandmortyapi.com/api")
+        let homeResult = await httpClient.makeRequest(endpoint: endpoint, baseUrl: Endpoint.baseUrl)
         
         guard case .success(let data) = homeResult else {
             guard case .failure(let error) = homeResult else {

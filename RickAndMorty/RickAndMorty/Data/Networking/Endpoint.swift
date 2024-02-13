@@ -9,4 +9,6 @@ struct Endpoint {
     let path: String
     let queryParameters: [String: Any]
     let method: HTTPMethod
+    
+    static let baseUrl = "https://rickandmortyapi.com/api"
 }

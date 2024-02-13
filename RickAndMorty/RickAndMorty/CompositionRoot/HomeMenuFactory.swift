@@ -9,24 +9,32 @@ import Foundation
 
 class HomeMenuFactory {
     static func create() -> HomeMenuView {
-        return HomeMenuView(viewModel: createViewModel())
+        HomeMenuView(viewModel: createViewModel())
     }
     
     private static func createViewModel() -> HomeMenuViewModel {
-        return HomeMenuViewModel(getHomeMenuList: createUseCase())
+        HomeMenuViewModel(getHomeMenuList: createUseCase())
     }
     
     private static func createUseCase() -> GetHomeMenuListType {
-        return GetHomeMenuList(repository: createRepository())
+        GetHomeMenuList(repository: createRepository())
     }
     
     private static func createRepository() -> HomeMenuRepositoryType {
-        return HomeMenuRepository(datasource: createDatasource(), homeErrorMapper: HomeErrorMapper())
+        
+        return HomeMenuRepository(
+            datasource: createDatasource(),
+            homeErrorMapper: HomeErrorMapper(),
+            homeMenuDomainMapper: HomeMenuDomainMapper()
+        )
     }
     
     private static func createDatasource() -> HomeMenuDatasourceType {
         
-        let httpClient = HTTPClient(requestMaker: URLSessionRequestMaker(), errorResolver: URLSessionErrorResolver())
+        let httpClient = HTTPClient(
+            requestMaker: URLSessionRequestMaker(),
+            errorResolver: URLSessionErrorResolver()
+        )
         
         return HomeMenuDatasource(httpClient: httpClient)
     }
