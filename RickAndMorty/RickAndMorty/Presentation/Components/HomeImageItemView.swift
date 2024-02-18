@@ -1,5 +1,5 @@
 //
-//  HomeMenuImageItemView.swift
+//  HomeImageItemView.swift
 //  RickAndMorty
 //
 //  Created by Nicolas Monzon on 12/2/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeMenuImageItemView: View {
+struct HomeImageItemView: View {
     
     let title: String
     let imageName: String
@@ -16,7 +16,7 @@ struct HomeMenuImageItemView: View {
         Image(imageName)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 180, height: 250)
+            .frame(width: 180, height: 300)
             .cornerRadius(10)
             .overlay(
                 Text(title)
@@ -31,7 +31,7 @@ struct HomeMenuImageItemView: View {
 }
 
 #Preview {
-    HomeMenuImageItemView(title: "Characters", imageName: "characters")
+    HomeImageItemView(title: "Characters", imageName: "characters")
 }
 
 

@@ -19,21 +19,26 @@ struct HomeMenuView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(UIColor.gray.withAlphaComponent(0.2)).ignoresSafeArea(.all)
+                Color.backgroundColor.ignoresSafeArea(.all)
                 VStack {
                     if viewModel.showLoadingSpinner {
                         ProgressView().progressViewStyle(.circular)
                     } else {
                         LazyVGrid(columns: columns, spacing: 10) {
                             ForEach(viewModel.homeList, id: \.self) { homeItem in
-                                HomeMenuImageItemView(
-                                    title: homeItem.title.capitalized,
-                                    imageName: homeItem.title.lowercased())
+                                NavigationLink(
+                                    destination: DestinationView(selectedItem: homeItem),
+                                    label: {
+                                        HomeImageItemView(
+                                            title: homeItem.title.capitalized,
+                                            imageName: homeItem.title.lowercased())
+                                    }
+                                )
                             }
                         }
-                        .padding()
-                        
                     }
+                    Spacer()
+                    
                 }
             }
             .navigationTitle("Rick and Morty")
@@ -44,3 +49,16 @@ struct HomeMenuView: View {
     }
 }
 
+struct DestinationView: View {
+    let selectedItem: HomeMenuItem
+    
+    var body: some View {
+        if selectedItem.title == "characters" {
+            CharactersFactory.create()
+        } else if selectedItem.title == "locations" {
+            LocationsFactory.create()
+        } else {
+            EpisodesFactory.create()
+        }
+    }
+}

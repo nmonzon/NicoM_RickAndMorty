@@ -13,20 +13,27 @@ class CharactersFactory {
     }
     
     static private func createViewModel() -> CharacterListViewModel {
-        CharacterListViewModel(getCharactersList: createUseCase())
+        CharacterListViewModel(getCharactersList: createUseCase(), searchCharacterList: createUseCaseSearchCharacterList())
+    }
+    
+    static private func createUseCaseSearchCharacterList() -> SearchCharacterListType {
+        SearchCharacterList(repository: createRepository())
     }
     
     static private func createUseCase() -> GetCharactersListType {
         GetCharactersList(repository: createRepository())
     }
     
-    static private func createRepository() -> GetCharacterListRepositoryType {
+    static private func createRepository() -> GetCharactersListRepository {
         GetCharactersListRepository(
             characterListDatasource: createDatasource(),
             charactersDomainMapper: CharactersDomainMapper(),
-            characterErrorDomainMapper: CharacterErrorDomainMapper()
-        )
+            characterErrorDomainMapper: CharacterErrorDomainMapper(), cacheDatasource: InMemoryCacheCharactersInfoDatasource.shared, episodeListDatasource: createEpisodeDatasource())
     }
+            
+            static private func createEpisodeDatasource() -> EpisodeListDatasourceType {
+                return EpisodeListDatasource(httpClient: HTTPClient(requestMaker: URLSessionRequestMaker(), errorResolver: URLSessionErrorResolver()))
+            }
     
     static private func createDatasource() -> CharacterListDatasourceType {
         CharacterListDatasource(

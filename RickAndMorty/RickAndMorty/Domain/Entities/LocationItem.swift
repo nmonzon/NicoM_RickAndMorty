@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct LocationItem: Codable, Identifiable {
-    let id: Int
+struct LocationItem: Identifiable {
+    var id: Int? = nil
     let name: String
-    let type: String
-    let dimension: String
-    let residents: [String]
+    var type: String? = nil
+    var dimension: String? = nil
+    var characters: [CharacterItem]
+    var residents: [String]? = nil
     let url: String
-    let created: String
+    var created: String? = nil
 }

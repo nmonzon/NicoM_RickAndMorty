@@ -22,10 +22,15 @@ class LocationsFactory {
     
     static private func createRepository() -> GetLocationListRepositoryType {
         GetLocationListRepository(
-            LocationListDatasource: createDatasource(),
-            LocationDomainMapper:  LocationsDomainMapper(),
-            LocationDomainErrorMapper: LocationErrorDomainMapper()
+            locationListDatasource: createDatasource(),
+            locationDomainMapper:  LocationsDomainMapper(),
+            locationDomainErrorMapper: LocationErrorDomainMapper(), 
+            characterListDatasource: createCharacterListDatasource()
         )
+    }
+    
+    static private func createCharacterListDatasource() -> CharacterListDatasourceType {
+        CharacterListDatasource(httpClient: HTTPClient(requestMaker: URLSessionRequestMaker(), errorResolver: URLSessionErrorResolver()))
     }
     
     static private func createDatasource() -> LocationListDatasourceType {

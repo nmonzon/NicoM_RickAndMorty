@@ -18,10 +18,20 @@ struct LocationListView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color("backgroundGreen").ignoresSafeArea(.all)
+                Color.backgroundColor.ignoresSafeArea(.all)
                 ScrollView {
                     ForEach(viewModel.items) { item in
-                        Text(item.name)
+                        NavigationLink {
+                            DetailView(detailItem: DetailItem(title: "Location Detail",
+                                                              dictInfo: [
+                                                                "Dimension:": item.dimension ?? "",
+                                                                "Name:": item.name,
+                                                                "Type:": item.type ?? ""
+                                                              ],
+                                                              characterImages: item.characters.map({$0.image})))
+                        } label: {
+                            LocationView(item: item)
+                        }
                     }
                     .padding(.horizontal)
                 }

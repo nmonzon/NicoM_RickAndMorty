@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let characterListView: CharacterListView
+    let locationListView: LocationListView
+    let episodeListView: EpisodeListView
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            characterListView.tabItem {
+                Label("Characters", systemImage: "figure")
+            }
+            episodeListView.tabItem {
+                Label("Episodes", systemImage: "tv")
+            }
+            locationListView.tabItem {
+                Label("Locations", systemImage: "location.circle")
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}

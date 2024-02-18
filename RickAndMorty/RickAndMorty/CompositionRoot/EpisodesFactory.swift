@@ -24,8 +24,13 @@ class EpisodesFactory {
         GetEpisodeListRepository(
             episodeListDatasource: createDatasource(),
             episodeDomainMapper:  EpisodesDomainMapper(),
-            episodeDomainErrorMapper: EpisodeErrorDomainMapper()
+            episodeDomainErrorMapper: EpisodeErrorDomainMapper(),
+            characterListDatasource: createCharacterDatasource()
         )
+    }
+    
+    static private func createCharacterDatasource() -> CharacterListDatasourceType {
+        CharacterListDatasource(httpClient: HTTPClient(requestMaker: URLSessionRequestMaker(), errorResolver: URLSessionErrorResolver()))
     }
     
     static private func createDatasource() -> EpisodeListDatasourceType {

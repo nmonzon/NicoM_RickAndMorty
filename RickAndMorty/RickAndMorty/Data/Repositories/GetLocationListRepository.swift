@@ -9,28 +9,41 @@ import Foundation
 
 class GetLocationListRepository: GetLocationListRepositoryType {
     
-    private let LocationListDatasource: LocationListDatasourceType
-    private let LocationDomainMapper: LocationsDomainMapper
-    private let LocationDomainErrorMapper: LocationErrorDomainMapper
+    private let locationListDatasource: LocationListDatasourceType
+    private let locationDomainMapper: LocationsDomainMapper
+    private let locationDomainErrorMapper: LocationErrorDomainMapper
+    private let characterListDatasource: CharacterListDatasourceType
     
-    init(LocationListDatasource: LocationListDatasourceType, LocationDomainMapper: LocationsDomainMapper, LocationDomainErrorMapper: LocationErrorDomainMapper) {
-        self.LocationListDatasource = LocationListDatasource
-        self.LocationDomainMapper = LocationDomainMapper
-        self.LocationDomainErrorMapper = LocationDomainErrorMapper
+    init(
+        locationListDatasource: LocationListDatasourceType,
+        locationDomainMapper: LocationsDomainMapper,
+        locationDomainErrorMapper: LocationErrorDomainMapper,
+        characterListDatasource: CharacterListDatasourceType
+    ) {
+        self.locationListDatasource = locationListDatasource
+        self.locationDomainMapper = locationDomainMapper
+        self.locationDomainErrorMapper = locationDomainErrorMapper
+        self.characterListDatasource = characterListDatasource
     }
     
     func getLocationList() async -> Result<[LocationItem], HomeDomainError> {
         
-        let LocationListResult = await LocationListDatasource.getLocationList()
+        let locationListResult = await locationListDatasource.getLocationList()
+        let characterListResult = await characterListDatasource.getCharacterList()
         
-        guard case .success(let locationList) = LocationListResult else {
-            guard case .failure(let error) = LocationListResult else {
+        guard case .success(let locationList) = locationListResult else {
+            guard case .failure(let error) = locationListResult else {
                 return .failure(.generic)
             }
-            return .failure(LocationDomainErrorMapper.map(error: error))
+            return .failure(locationDomainErrorMapper.map(error: error))
 
         }
-        return .success(LocationDomainMapper.toDomain(locations: locationList))
+        
+        guard case .success(let characterList) = characterListResult else {
+            return .success(locationDomainMapper.findCharactersWithLocations(for: [], locations: locationList))
+        }
+        
+        return .success(locationDomainMapper.findCharactersWithLocations(for: characterList, locations: locationList))
 
     }
     

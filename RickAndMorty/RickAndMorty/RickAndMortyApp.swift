@@ -11,7 +11,10 @@ import SwiftUI
 struct RickAndMortyApp: App {
     var body: some Scene {
         WindowGroup {
-            EpisodesFactory.create()
+            ContentView(
+                characterListView: CharactersFactory.create(),
+                locationListView: LocationsFactory.create(),
+                episodeListView: EpisodesFactory.create())
         }
     }
 }

@@ -11,6 +11,8 @@ class HomeMenuViewModel: ObservableObject {
     
     @Published var showLoadingSpinner: Bool = false
     @Published var homeList: [HomeMenuItem] = []
+    @Published var selectedItem: HomeMenuItem?
+    
     private let getHomeMenuList: GetHomeMenuListType
     
     init(getHomeMenuList: GetHomeMenuListType) {

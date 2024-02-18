@@ -17,7 +17,7 @@ struct CharacterDTO: Decodable {
     let id: Int
     let name, status, species, type: String
     let gender: String
-    let origin: LocationDTO
+    let origin: OriginDTO
     let location: LocationDTO
     let image: String
     let episode: [String]
@@ -26,13 +26,13 @@ struct CharacterDTO: Decodable {
 }
 
 // MARK: - LocationDTO
-struct LocationDTO: Decodable {
+struct OriginDTO: Decodable {
     let name: String
     let url: String
 }
 
-extension CharacterDTO {
-    func toDomain() {
-        return
-    }
+// MARK: - LocationDTO
+struct LocationDTO: Decodable {
+    let name: String
+    let url: String
 }

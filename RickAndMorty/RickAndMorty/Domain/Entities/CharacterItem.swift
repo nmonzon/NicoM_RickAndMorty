@@ -11,16 +11,55 @@ struct CharacterItem: Identifiable {
     
     let id: Int
     let name: String
-    //let status: String
+    let status: String
     let species: String
-    //let type: String
-    //let gender: String
-    //let origin: Origin
-    //let location:Location
+    let type: String
+    let gender: String
+    let origin: CharacterOrigin
+    let location:CharacterLocation
     let image: String
-    //let episode: [String]
-    //let url: String
-    //let created: String
+    let episode: [EpisodeItem]
+    let url: String
+    let created: String
     
-    
+    func nonEmptyFields() -> [Field] {
+            let mirror = Mirror(reflecting: self)
+            return mirror.children.compactMap { child in
+                switch child.label {
+                case "id", "name", "episode", "image", "url":
+                    return nil
+                case "origin":
+                    if let value = child.value as? CharacterOrigin {
+                        return Field(title: child.label!.capitalized, description: value.name)
+                    }
+                    return nil
+                case "location":
+                    if let value = child.value as? CharacterLocation {
+                        return Field(title: child.label!.capitalized, description: value.name)
+                    }
+                    return nil
+                case "type":
+                    if let value = child.value as? String, !value.isEmpty {
+                        return Field(title: child.label!.capitalized, description: value)
+                    } else {
+                        return Field(title: child.label!.capitalized, description: "None")
+                    }
+                case "created":
+                    if let value = child.value as? String, !value.isEmpty {
+                        return Field(title: child.label!.capitalized, description: value.shortFormattedString() ?? value)
+                    }
+                    return nil
+                default:
+                    if let value = child.value as? String, !value.isEmpty {
+                        return Field(title: child.label!.capitalized, description: value)
+                    }
+                    return nil
+                }
+            }
+        }
+}
+
+struct Field: Hashable {
+    let title: String
+    let description: String
 }

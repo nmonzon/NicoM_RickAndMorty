@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct EpisodeItem: Codable, Identifiable {
+struct EpisodeItem: Identifiable {
     
     let id: Int
     let name: String
     let air_date: String
     let episode: String
-    let characters: [String]
+    let characters: [CharacterItem]
     let url: String
     let created: String
 }
