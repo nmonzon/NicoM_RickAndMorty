@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharacterItem: Identifiable {
+struct CharacterItem: Identifiable, Codable {
     
     let id: Int
     let name: String

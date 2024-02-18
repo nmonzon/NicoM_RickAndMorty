@@ -236,6 +236,21 @@
 		4BFA0BC22B81FD5200C0FA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA0BC12B81FD5200C0FA67 /* LaunchScreen.storyboard */; };
 		4BFA0BC32B81FD5200C0FA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA0BC12B81FD5200C0FA67 /* LaunchScreen.storyboard */; };
 		4BFA0BC42B81FD5200C0FA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFA0BC12B81FD5200C0FA67 /* LaunchScreen.storyboard */; };
+		4BFA0BC72B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BC62B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift */; };
+		4BFA0BC82B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BC62B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift */; };
+		4BFA0BC92B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BC62B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift */; };
+		4BFA0BCB2B82039700C0FA67 /* CharacterItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BCA2B82039700C0FA67 /* CharacterItemData.swift */; };
+		4BFA0BCC2B82039700C0FA67 /* CharacterItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BCA2B82039700C0FA67 /* CharacterItemData.swift */; };
+		4BFA0BCD2B82039700C0FA67 /* CharacterItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BCA2B82039700C0FA67 /* CharacterItemData.swift */; };
+		4BFA0BCF2B8205B800C0FA67 /* SwiftDataContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BCE2B8205B800C0FA67 /* SwiftDataContainerType.swift */; };
+		4BFA0BD02B8205B800C0FA67 /* SwiftDataContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BCE2B8205B800C0FA67 /* SwiftDataContainerType.swift */; };
+		4BFA0BD12B8205B800C0FA67 /* SwiftDataContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BCE2B8205B800C0FA67 /* SwiftDataContainerType.swift */; };
+		4BFA0BD32B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BD22B8205CB00C0FA67 /* SwiftDataContainer.swift */; };
+		4BFA0BD42B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BD22B8205CB00C0FA67 /* SwiftDataContainer.swift */; };
+		4BFA0BD52B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BD22B8205CB00C0FA67 /* SwiftDataContainer.swift */; };
+		4BFA0BD72B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BD62B8206DF00C0FA67 /* StrategyCacheCharacters.swift */; };
+		4BFA0BD82B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BD62B8206DF00C0FA67 /* StrategyCacheCharacters.swift */; };
+		4BFA0BD92B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA0BD62B8206DF00C0FA67 /* StrategyCacheCharacters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,6 +359,11 @@
 		4BFA0BB42B81EA3000C0FA67 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		4BFA0BBD2B81F98F00C0FA67 /* MockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHelper.swift; sourceTree = "<group>"; };
 		4BFA0BC12B81FD5200C0FA67 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BFA0BC62B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataCacheCharacterItemList.swift; sourceTree = "<group>"; };
+		4BFA0BCA2B82039700C0FA67 /* CharacterItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemData.swift; sourceTree = "<group>"; };
+		4BFA0BCE2B8205B800C0FA67 /* SwiftDataContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataContainerType.swift; sourceTree = "<group>"; };
+		4BFA0BD22B8205CB00C0FA67 /* SwiftDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataContainer.swift; sourceTree = "<group>"; };
+		4BFA0BD62B8206DF00C0FA67 /* StrategyCacheCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyCacheCharacters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +418,7 @@
 			children = (
 				4B6247A52B810468007D0A9A /* InMemoryCacheCharactersInfoDatasource.swift */,
 				4B6247A92B810484007D0A9A /* CacheCharactersInfoDatasourceType.swift */,
+				4BFA0BD62B8206DF00C0FA67 /* StrategyCacheCharacters.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -686,6 +707,7 @@
 		4B9BEAC62B7819AC003A3727 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				4BFA0BC52B82031C00C0FA67 /* Data */,
 				4B9BEB3E2B796DAE003A3727 /* Networking */,
 			);
 			path = Infrastructure;
@@ -768,6 +790,17 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4BFA0BC52B82031C00C0FA67 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4BFA0BC62B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift */,
+				4BFA0BCA2B82039700C0FA67 /* CharacterItemData.swift */,
+				4BFA0BCE2B8205B800C0FA67 /* SwiftDataContainerType.swift */,
+				4BFA0BD22B8205CB00C0FA67 /* SwiftDataContainer.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -918,6 +951,7 @@
 				4B737FE92B7B1122001F4DAA /* EpisodeListDatasourceType.swift in Sources */,
 				4B737FF52B7B17BC001F4DAA /* EpisodesDomainMapper.swift in Sources */,
 				4B9BEB0E2B785AF3003A3727 /* HomeMenuRepository.swift in Sources */,
+				4BFA0BCF2B8205B800C0FA67 /* SwiftDataContainerType.swift in Sources */,
 				4B9BEA872B7815D0003A3727 /* ContentView.swift in Sources */,
 				4B9BEB442B7977CF003A3727 /* URLSessionErrorResolver.swift in Sources */,
 				4B7380252B7BF18E001F4DAA /* CoordinatorView.swift in Sources */,
@@ -949,6 +983,7 @@
 				4B9BEB192B794133003A3727 /* HTTPClientError.swift in Sources */,
 				4B9BEAD42B781A10003A3727 /* LocationListView.swift in Sources */,
 				4BFA0BB52B81EA3000C0FA67 /* LocationView.swift in Sources */,
+				4BFA0BCB2B82039700C0FA67 /* CharacterItemData.swift in Sources */,
 				4B737F8C2B7AC544001F4DAA /* CharacterErrorDomainMapper.swift in Sources */,
 				4B737F5A2B7A6A1D001F4DAA /* PropertyIterator.swift in Sources */,
 				4B9BEB3A2B796D72003A3727 /* HTTPClientType.swift in Sources */,
@@ -968,6 +1003,7 @@
 				4B9BEB362B796D33003A3727 /* HTTPMethod.swift in Sources */,
 				4B737F802B7AB554001F4DAA /* CharacterListDatasourceType.swift in Sources */,
 				4B9BEAFE2B782F81003A3727 /* LocationItem.swift in Sources */,
+				4BFA0BD32B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */,
 				4B9BEB212B79445D003A3727 /* HomeMenuItem.swift in Sources */,
 				4B9BEAE02B781A4B003A3727 /* CharacterListViewModel.swift in Sources */,
 				4B6247A32B80F4C1007D0A9A /* EpisodeView.swift in Sources */,
@@ -977,6 +1013,8 @@
 				4B7380192B7BECAA001F4DAA /* LocationsFactory.swift in Sources */,
 				4B9BEAD02B781A08003A3727 /* LocationViewModel.swift in Sources */,
 				4B9BEAE82B781A79003A3727 /* HomeMenuViewModel.swift in Sources */,
+				4BFA0BD72B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */,
+				4BFA0BC72B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift in Sources */,
 				4B73801D2B7BF032001F4DAA /* LocationsDomainMapper.swift in Sources */,
 				4BFA0BBE2B81F98F00C0FA67 /* MockHelper.swift in Sources */,
 				4B9BEADC2B781A25003A3727 /* CharacterDetailView.swift in Sources */,
@@ -1000,9 +1038,11 @@
 				4BFA0BAE2B81D06500C0FA67 /* DetailItem.swift in Sources */,
 				4B9BEAC92B7819EC003A3727 /* EpisodeListView.swift in Sources */,
 				4B9BEB492B7977E7003A3727 /* URLSessionRequestMaker.swift in Sources */,
+				4BFA0BD82B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */,
 				4B737F5B2B7A6A1D001F4DAA /* PropertyIterator.swift in Sources */,
 				4B737F812B7AB554001F4DAA /* CharacterListDatasourceType.swift in Sources */,
 				4B737FFA2B7B1D4C001F4DAA /* EpisodesFactory.swift in Sources */,
+				4BFA0BC82B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift in Sources */,
 				4B737FEA2B7B1122001F4DAA /* EpisodeListDatasourceType.swift in Sources */,
 				4B737FEE2B7B114D001F4DAA /* EpisodeDTO.swift in Sources */,
 				4B737FD62B7AF8F6001F4DAA /* GetEpisodeListRepositoryType.swift in Sources */,
@@ -1035,6 +1075,7 @@
 				4B9BEAFF2B782F81003A3727 /* LocationItem.swift in Sources */,
 				4B7380162B7BEA32001F4DAA /* Coordinator.swift in Sources */,
 				4B737F892B7AC263001F4DAA /* HomeMenuDomainMapper.swift in Sources */,
+				4BFA0BCC2B82039700C0FA67 /* CharacterItemData.swift in Sources */,
 				4B737FFE2B7BDC81001F4DAA /* GetLocationList.swift in Sources */,
 				4B73801E2B7BF032001F4DAA /* LocationsDomainMapper.swift in Sources */,
 				4B7380122B7BDDDA001F4DAA /* LocationInfoDTO.swift in Sources */,
@@ -1045,6 +1086,7 @@
 				4B9BEB032B785883003A3727 /* GetHomeMenuList.swift in Sources */,
 				4BFA0BB62B81EA3000C0FA67 /* LocationView.swift in Sources */,
 				4B9BEAE12B781A4B003A3727 /* CharacterListViewModel.swift in Sources */,
+				4BFA0BD42B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */,
 				4B737F6B2B7AA43F001F4DAA /* CharactersFactory.swift in Sources */,
 				4B737F5F2B7A7D41001F4DAA /* HomeImageItemView.swift in Sources */,
 				4B9BEB332B796D1A003A3727 /* Endpoint.swift in Sources */,
@@ -1061,6 +1103,7 @@
 				4B737FF62B7B17BC001F4DAA /* EpisodesDomainMapper.swift in Sources */,
 				4B9BEAD12B781A08003A3727 /* LocationViewModel.swift in Sources */,
 				4B9BEB372B796D33003A3727 /* HTTPMethod.swift in Sources */,
+				4BFA0BD02B8205B800C0FA67 /* SwiftDataContainerType.swift in Sources */,
 				4B9BEB1A2B794133003A3727 /* HTTPClientError.swift in Sources */,
 				4BFA0BB22B81E48100C0FA67 /* CharacterView.swift in Sources */,
 				4BFA0BBF2B81F98F00C0FA67 /* MockHelper.swift in Sources */,
@@ -1078,9 +1121,11 @@
 				4B9BEB342B796D1A003A3727 /* Endpoint.swift in Sources */,
 				4B9BEAF82B782F0A003A3727 /* CharacterItem.swift in Sources */,
 				4B9BEB102B785AF3003A3727 /* HomeMenuRepository.swift in Sources */,
+				4BFA0BD52B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */,
 				4B9BEAA02B7815D1003A3727 /* RickAndMortyUITests.swift in Sources */,
 				4B737FE72B7B111A001F4DAA /* EpisodeListDatasource.swift in Sources */,
 				4B9BEB462B7977CF003A3727 /* URLSessionErrorResolver.swift in Sources */,
+				4BFA0BD92B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */,
 				4B9BEB4A2B7977E7003A3727 /* URLSessionRequestMaker.swift in Sources */,
 				4B73800F2B7BDD30001F4DAA /* LocationListDatasourceType.swift in Sources */,
 				4B9BEB0C2B785A52003A3727 /* HomeMenuRepositoryType.swift in Sources */,
@@ -1112,6 +1157,7 @@
 				4B737FD72B7AF8F6001F4DAA /* GetEpisodeListRepositoryType.swift in Sources */,
 				4B737F862B7AC1AF001F4DAA /* CharactersDomainMapper.swift in Sources */,
 				4B9BEACA2B7819EC003A3727 /* EpisodeListView.swift in Sources */,
+				4BFA0BD12B8205B800C0FA67 /* SwiftDataContainerType.swift in Sources */,
 				4BFA0BA92B81C3A700C0FA67 /* DetailView.swift in Sources */,
 				4B737F8A2B7AC263001F4DAA /* HomeMenuDomainMapper.swift in Sources */,
 				4B737FEF2B7B114D001F4DAA /* EpisodeDTO.swift in Sources */,
@@ -1122,11 +1168,13 @@
 				4B9BEAE22B781A4B003A3727 /* CharacterListViewModel.swift in Sources */,
 				4B9BEB302B7965F4003A3727 /* HomeMenuDatasource.swift in Sources */,
 				4BFA0BAF2B81D06500C0FA67 /* DetailItem.swift in Sources */,
+				4BFA0BC92B82036B00C0FA67 /* SwiftDataCacheCharacterItemList.swift in Sources */,
 				4B9BEACE2B7819FB003A3727 /* EpisodeListViewModel.swift in Sources */,
 				4BFA0BB32B81E48100C0FA67 /* CharacterView.swift in Sources */,
 				4B737F782B7AA9A7001F4DAA /* GetCharactersListRepositoryType.swift in Sources */,
 				4B737FEB2B7B1122001F4DAA /* EpisodeListDatasourceType.swift in Sources */,
 				4B9BEAD22B781A08003A3727 /* LocationViewModel.swift in Sources */,
+				4BFA0BCD2B82039700C0FA67 /* CharacterItemData.swift in Sources */,
 				4B9BEAEA2B781A79003A3727 /* HomeMenuViewModel.swift in Sources */,
 				4B9BEADE2B781A25003A3727 /* CharacterDetailView.swift in Sources */,
 				4B9BEB422B796DBA003A3727 /* HTTPClient.swift in Sources */,
@@ -1288,6 +1336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1303,6 +1352,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1320,6 +1370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = NO;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1335,6 +1386,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

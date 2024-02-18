@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct CharacterOrigin: Decodable {
+struct CharacterOrigin: Codable {
+
     let name: String
-    let url: String
+    let url: String    
+    
+    init(name: String, url: String) {
+        self.name = name
+        self.url = url
+    }
 }

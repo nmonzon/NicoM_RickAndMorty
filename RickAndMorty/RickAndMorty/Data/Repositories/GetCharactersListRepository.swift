@@ -49,7 +49,10 @@ class GetCharactersListRepository: GetCharacterListRepositoryType {
             return .success(charactersDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: []))
         }
         
-        return .success(charactersDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: episodeList))
+        let characterListDomain = charactersDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: episodeList)
+        await cacheDatasource.saveCharacterList(characterListDomain)
+        
+        return .success(characterListDomain)
     }
     
 }

@@ -57,25 +57,26 @@ struct CharacterDetailView: View {
                     }
                     .padding(.horizontal, 8)
                     
-                    Text("Episodes")
-                        .fontWeight(.medium)
-                        .frame(width: UIScreen.main.bounds.width, height: 40)
-                        .background(Color.lightBackgroundColor)
-                        .foregroundColor(.titleColor)
-                    
-                    ScrollView(.horizontal) {
-                        HStack(spacing: 20) {
-                            ForEach(characterDetailItem.episode) { episode in
-                                EpisodeView(item: episode)
+                    if !characterDetailItem.episode.isEmpty {
+                        Text("Episodes")
+                            .fontWeight(.medium)
+                            .frame(width: UIScreen.main.bounds.width, height: 40)
+                            .background(Color.lightBackgroundColor)
+                            .foregroundColor(.titleColor)
+                        
+                        ScrollView(.horizontal) {
+                            HStack(spacing: 20) {
+                                ForEach(characterDetailItem.episode) { episode in
+                                    EpisodeView(item: episode)
+                                }
                             }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        .padding(.bottom, 16)
                     }
-                    .padding(.bottom, 16)
                 }
                 
             }
-            .ignoresSafeArea(.all)
         }
         
     }

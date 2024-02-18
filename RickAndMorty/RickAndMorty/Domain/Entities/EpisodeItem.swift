@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EpisodeItem: Identifiable {
+struct EpisodeItem: Identifiable, Codable {
     
     let id: Int
     let name: String

@@ -28,7 +28,15 @@ class CharactersFactory {
         GetCharactersListRepository(
             characterListDatasource: createDatasource(),
             charactersDomainMapper: CharactersDomainMapper(),
-            characterErrorDomainMapper: CharacterErrorDomainMapper(), cacheDatasource: InMemoryCacheCharactersInfoDatasource.shared, episodeListDatasource: createEpisodeDatasource())
+            characterErrorDomainMapper: CharacterErrorDomainMapper(), cacheDatasource: createCacheDatasource(), episodeListDatasource: createEpisodeDatasource())
+    }
+    
+    private static func createCacheDatasource() -> CacheCharactersInfoDatasourceType {
+        StrategyCacheCharacters(temporalCache: InMemoryCacheCharactersInfoDatasource.shared, persistanceCache: createPersistanceCacheDatasource())
+    }
+    
+    private static func createPersistanceCacheDatasource() -> CacheCharactersInfoDatasourceType {
+        return SwiftDataCacheCharacterItemList(container: SwiftDataContainer.shared)
     }
             
             static private func createEpisodeDatasource() -> EpisodeListDatasourceType {
