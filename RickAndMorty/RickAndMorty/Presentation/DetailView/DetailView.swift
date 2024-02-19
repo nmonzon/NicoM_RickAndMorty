@@ -72,6 +72,6 @@ struct DetailView: View {
 }
 
 
-//#Preview {
-//    DetailView(detailItem: MockHelper.getDetailItem())
-//}
+#Preview {
+    DetailView(detailItem: MockHelper.getDetailItem())
+}

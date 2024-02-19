@@ -24,6 +24,12 @@
 		4B6247B22B811002007D0A9A /* SearchCharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6247B12B811002007D0A9A /* SearchCharacterListRepositoryType.swift */; };
 		4B6247B32B811002007D0A9A /* SearchCharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6247B12B811002007D0A9A /* SearchCharacterListRepositoryType.swift */; };
 		4B6247B42B811002007D0A9A /* SearchCharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6247B12B811002007D0A9A /* SearchCharacterListRepositoryType.swift */; };
+		4B6B2C812B82E23C00B4BF6A /* SearchCharacterListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B2C802B82E23C00B4BF6A /* SearchCharacterListTests.swift */; };
+		4B6B2C842B82E29000B4BF6A /* SearchCharacterListRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B2C832B82E29000B4BF6A /* SearchCharacterListRepositoryStub.swift */; };
+		4B6B2C862B82E2B500B4BF6A /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B2C852B82E2B500B4BF6A /* Equatable.swift */; };
+		4B6B2C882B82E4AD00B4BF6A /* GetCharacterListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B2C872B82E4AD00B4BF6A /* GetCharacterListRepositoryTests.swift */; };
+		4B6B2C8A2B82ED7100B4BF6A /* CacheDatasourceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B2C892B82ED7100B4BF6A /* CacheDatasourceStub.swift */; };
+		4B6B2C8B2B830BF800B4BF6A /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B2C852B82E2B500B4BF6A /* Equatable.swift */; };
 		4B737F5A2B7A6A1D001F4DAA /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B737F592B7A6A1D001F4DAA /* PropertyIterator.swift */; };
 		4B737F5B2B7A6A1D001F4DAA /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B737F592B7A6A1D001F4DAA /* PropertyIterator.swift */; };
 		4B737F5C2B7A6A1D001F4DAA /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B737F592B7A6A1D001F4DAA /* PropertyIterator.swift */; };
@@ -115,7 +121,6 @@
 		4B9BEA872B7815D0003A3727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BEA862B7815D0003A3727 /* ContentView.swift */; };
 		4B9BEA892B7815D1003A3727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9BEA882B7815D1003A3727 /* Assets.xcassets */; };
 		4B9BEA8C2B7815D1003A3727 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9BEA8B2B7815D1003A3727 /* Preview Assets.xcassets */; };
-		4B9BEA962B7815D1003A3727 /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BEA952B7815D1003A3727 /* RickAndMortyTests.swift */; };
 		4B9BEAA02B7815D1003A3727 /* RickAndMortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BEA9F2B7815D1003A3727 /* RickAndMortyUITests.swift */; };
 		4B9BEAA22B7815D1003A3727 /* RickAndMortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BEAA12B7815D1003A3727 /* RickAndMortyUITestsLaunchTests.swift */; };
 		4B9BEAC82B7819EC003A3727 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BEAC72B7819EC003A3727 /* EpisodeListView.swift */; };
@@ -255,6 +260,11 @@
 		4B6247A92B810484007D0A9A /* CacheCharactersInfoDatasourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheCharactersInfoDatasourceType.swift; sourceTree = "<group>"; };
 		4B6247AD2B810C9A007D0A9A /* SearchCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCharacterList.swift; sourceTree = "<group>"; };
 		4B6247B12B811002007D0A9A /* SearchCharacterListRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCharacterListRepositoryType.swift; sourceTree = "<group>"; };
+		4B6B2C802B82E23C00B4BF6A /* SearchCharacterListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCharacterListTests.swift; sourceTree = "<group>"; };
+		4B6B2C832B82E29000B4BF6A /* SearchCharacterListRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCharacterListRepositoryStub.swift; sourceTree = "<group>"; };
+		4B6B2C852B82E2B500B4BF6A /* Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatable.swift; sourceTree = "<group>"; };
+		4B6B2C872B82E4AD00B4BF6A /* GetCharacterListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterListRepositoryTests.swift; sourceTree = "<group>"; };
+		4B6B2C892B82ED7100B4BF6A /* CacheDatasourceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDatasourceStub.swift; sourceTree = "<group>"; };
 		4B737F592B7A6A1D001F4DAA /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 		4B737F5D2B7A7D41001F4DAA /* HomeImageItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImageItemView.swift; sourceTree = "<group>"; };
 		4B737F652B7AA0F6001F4DAA /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
@@ -292,7 +302,6 @@
 		4B9BEA882B7815D1003A3727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B9BEA8B2B7815D1003A3727 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B9BEA912B7815D1003A3727 /* RickAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B9BEA952B7815D1003A3727 /* RickAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTests.swift; sourceTree = "<group>"; };
 		4B9BEA9B2B7815D1003A3727 /* RickAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9BEA9F2B7815D1003A3727 /* RickAndMortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITests.swift; sourceTree = "<group>"; };
 		4B9BEAA12B7815D1003A3727 /* RickAndMortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -390,6 +399,16 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		4B6B2C822B82E26200B4BF6A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4B6B2C832B82E29000B4BF6A /* SearchCharacterListRepositoryStub.swift */,
+				4B6B2C852B82E2B500B4BF6A /* Equatable.swift */,
+				4B6B2C892B82ED7100B4BF6A /* CacheDatasourceStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4B737F7A2B7AB3AC001F4DAA /* Datasources */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,8 +480,10 @@
 		4B9BEA942B7815D1003A3727 /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				4B6B2C822B82E26200B4BF6A /* Helpers */,
 				4BFF64672B82CBA700065410 /* TestPlan.xctestplan */,
-				4B9BEA952B7815D1003A3727 /* RickAndMortyTests.swift */,
+				4B6B2C802B82E23C00B4BF6A /* SearchCharacterListTests.swift */,
+				4B6B2C872B82E4AD00B4BF6A /* GetCharacterListRepositoryTests.swift */,
 			);
 			path = RickAndMortyTests;
 			sourceTree = "<group>";
@@ -898,6 +919,7 @@
 				4B737FFD2B7BDC81001F4DAA /* GetLocationList.swift in Sources */,
 				4B9BEB062B785934003A3727 /* HomeMenuDTO.swift in Sources */,
 				4B7380212B7BF03C001F4DAA /* LocationErrorDomainMapper.swift in Sources */,
+				4B6B2C8B2B830BF800B4BF6A /* Equatable.swift in Sources */,
 				4B73800D2B7BDD30001F4DAA /* LocationListDatasourceType.swift in Sources */,
 				4B9BEB192B794133003A3727 /* HTTPClientError.swift in Sources */,
 				4B9BEAD42B781A10003A3727 /* LocationListView.swift in Sources */,
@@ -957,6 +979,7 @@
 				4B9BEB492B7977E7003A3727 /* URLSessionRequestMaker.swift in Sources */,
 				4BFA0BD82B8206DF00C0FA67 /* StrategyCacheCharacters.swift in Sources */,
 				4B737F5B2B7A6A1D001F4DAA /* PropertyIterator.swift in Sources */,
+				4B6B2C812B82E23C00B4BF6A /* SearchCharacterListTests.swift in Sources */,
 				4B737F812B7AB554001F4DAA /* CharacterListDatasourceType.swift in Sources */,
 				4B737FFA2B7B1D4C001F4DAA /* EpisodesFactory.swift in Sources */,
 				4BFF64702B82D07200065410 /* String+Extensions.swift in Sources */,
@@ -974,9 +997,9 @@
 				4B73800E2B7BDD30001F4DAA /* LocationListDatasourceType.swift in Sources */,
 				4B62479D2B805886007D0A9A /* Color+Extensions.swift in Sources */,
 				4B9BEAF72B782F0A003A3727 /* CharacterItem.swift in Sources */,
+				4B6B2C8A2B82ED7100B4BF6A /* CacheDatasourceStub.swift in Sources */,
 				4B737F672B7AA0F6001F4DAA /* CharacterDTO.swift in Sources */,
 				4B73800A2B7BDD26001F4DAA /* LocationListDatasource.swift in Sources */,
-				4B9BEA962B7815D1003A3727 /* RickAndMortyTests.swift in Sources */,
 				4B737F7D2B7AB54C001F4DAA /* CharacterListDatasource.swift in Sources */,
 				4B7380222B7BF03C001F4DAA /* LocationErrorDomainMapper.swift in Sources */,
 				4B7380062B7BDD04001F4DAA /* GetLocationListRepository.swift in Sources */,
@@ -984,6 +1007,7 @@
 				4B9BEB2B2B7964BC003A3727 /* HomeErrorMapper.swift in Sources */,
 				4BFA0BA82B81C3A700C0FA67 /* DetailView.swift in Sources */,
 				4B6247B32B811002007D0A9A /* SearchCharacterListRepositoryType.swift in Sources */,
+				4B6B2C842B82E29000B4BF6A /* SearchCharacterListRepositoryStub.swift in Sources */,
 				4B737FE62B7B111A001F4DAA /* EpisodeListDatasource.swift in Sources */,
 				4B9BEAFF2B782F81003A3727 /* LocationItem.swift in Sources */,
 				4BFA0BCC2B82039700C0FA67 /* CharacterItemData.swift in Sources */,
@@ -995,6 +1019,7 @@
 				4B737F6F2B7AA4A3001F4DAA /* GetCharactersList.swift in Sources */,
 				4BFA0BB62B81EA3000C0FA67 /* LocationView.swift in Sources */,
 				4B9BEAE12B781A4B003A3727 /* CharacterListViewModel.swift in Sources */,
+				4B6B2C882B82E4AD00B4BF6A /* GetCharacterListRepositoryTests.swift in Sources */,
 				4BFA0BD42B8205CB00C0FA67 /* SwiftDataContainer.swift in Sources */,
 				4B737F6B2B7AA43F001F4DAA /* CharactersFactory.swift in Sources */,
 				4B737F5F2B7A7D41001F4DAA /* HomeImageItemView.swift in Sources */,
@@ -1002,6 +1027,7 @@
 				4B9BEB272B7962BD003A3727 /* Foundation+Extensions.swift in Sources */,
 				4B737F772B7AA9A7001F4DAA /* GetCharactersListRepositoryType.swift in Sources */,
 				4B737F732B7AA974001F4DAA /* GetCharactersListRepository.swift in Sources */,
+				4B6B2C862B82E2B500B4BF6A /* Equatable.swift in Sources */,
 				4B9BEAE52B781A6C003A3727 /* CharacterListView.swift in Sources */,
 				4B6247AB2B810484007D0A9A /* CacheCharactersInfoDatasourceType.swift in Sources */,
 				4B9BEB3B2B796D72003A3727 /* HTTPClientType.swift in Sources */,
