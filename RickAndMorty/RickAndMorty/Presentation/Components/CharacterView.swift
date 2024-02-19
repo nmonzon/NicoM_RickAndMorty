@@ -45,6 +45,6 @@ struct CharacterView: View {
     }
 }
 
-#Preview {
-    CharacterView(item: MockHelper.generateCharacterItem())
-}
+//#Preview {
+//    CharacterView(item: MockHelper.generateCharacterItem())
+//}

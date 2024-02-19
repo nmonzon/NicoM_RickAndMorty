@@ -49,7 +49,7 @@ struct LocationView: View {
     }
 }
 
-#Preview {
-    LocationView(item: MockHelper.generateLocationItem()
-    )
-}
+//#Preview {
+//    LocationView(item: MockHelper.generateLocationItem()
+//    )
+//}

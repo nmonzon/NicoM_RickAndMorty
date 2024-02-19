@@ -36,6 +36,7 @@ struct CharacterDetailView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.titleColor)
                     LazyVGrid(columns: columns, spacing: 10) {
+                        
                         ForEach(characterDetailItem.nonEmptyFields(), id: \.self) { field in
                             
                             VStack {
@@ -82,6 +83,6 @@ struct CharacterDetailView: View {
     }
 }
 
-#Preview {
-    CharacterDetailView(characterDetailItem: MockHelper.generateCharacterItem())
-}
+//#Preview {
+//    CharacterDetailView(characterDetailItem: MockHelper.generateCharacterItem())
+//}

@@ -27,17 +27,17 @@ struct CharacterItem: Identifiable, Codable {
             return mirror.children.compactMap { child in
                 switch child.label {
                 case "id", "name", "episode", "image", "url":
-                    return nil
+                    return Field(title: "", description: "")
                 case "origin":
                     if let value = child.value as? CharacterOrigin {
                         return Field(title: child.label!.capitalized, description: value.name)
                     }
-                    return nil
+                    return Field(title: "", description: "")
                 case "location":
                     if let value = child.value as? CharacterLocation {
                         return Field(title: child.label!.capitalized, description: value.name)
                     }
-                    return nil
+                    return Field(title: "", description: "")
                 case "type":
                     if let value = child.value as? String, !value.isEmpty {
                         return Field(title: child.label!.capitalized, description: value)
@@ -48,12 +48,12 @@ struct CharacterItem: Identifiable, Codable {
                     if let value = child.value as? String, !value.isEmpty {
                         return Field(title: child.label!.capitalized, description: value.shortFormattedString() ?? value)
                     }
-                    return nil
+                    return Field(title: "", description: "")
                 default:
                     if let value = child.value as? String, !value.isEmpty {
                         return Field(title: child.label!.capitalized, description: value)
                     }
-                    return nil
+                    return Field(title: "", description: "")
                 }
             }
         }

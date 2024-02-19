@@ -30,8 +30,8 @@ struct HomeImageItemView: View {
     }
 }
 
-#Preview {
-    HomeImageItemView(title: "Characters", imageName: "characters")
-}
+//#Preview {
+//    HomeImageItemView(title: "Characters", imageName: "characters")
+//}
 
 
