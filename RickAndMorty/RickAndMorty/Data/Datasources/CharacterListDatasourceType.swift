@@ -9,4 +9,5 @@ import Foundation
 
 protocol CharacterListDatasourceType {
     func getCharacterList() async -> Result<[CharacterDTO],HTTPClientError>
+    func getCharacterList(characterName:String) async -> Result<[CharacterDTO],HTTPClientError>
 }

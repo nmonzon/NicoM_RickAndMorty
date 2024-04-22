@@ -10,6 +10,7 @@ import Foundation
 class EpisodeListDatasource: EpisodeListDatasourceType {
     
     private let httpClient: HTTPClient
+    private var endpoint: Endpoint? = Endpoint(url: URL(string: Constants.baseCharacterUrl)!)
     
     init(httpClient: HTTPClient) {
         self.httpClient = httpClient
@@ -17,8 +18,17 @@ class EpisodeListDatasource: EpisodeListDatasourceType {
     
     func getEpisodeList() async -> Result<[EpisodeDTO], HTTPClientError> {
         
-        let endpoint = Endpoint(path: "/episode", queryParameters: [:], method: .get)
-        let requestResult = await httpClient.makeRequest(endpoint: endpoint, baseUrl: Endpoint.baseUrl)
+        var episodeList: [EpisodeDTO] = []
+        
+        guard let url = URL(string: Constants.baseEpisodeUrl) else {
+            return .failure(.invalidURL)
+        }
+        
+        var currentEndpoint: Endpoint? = Endpoint(url: url)
+        
+        while currentEndpoint != nil {
+        
+        let requestResult = await httpClient.makeRequest(endpoint: currentEndpoint!)
         
         guard case .success(let data) = requestResult else {
             guard case .failure(let error) = requestResult else {
@@ -27,12 +37,22 @@ class EpisodeListDatasource: EpisodeListDatasourceType {
             return .failure(error)
         }
 
-        do {
-            let episodeList = try JSONDecoder().decode(EpisodesDTO.self, from: data)
-            return .success(episodeList.results)
-        } catch {
-            return .failure(.parsingError)
+            do {
+                let episodeResult = try JSONDecoder().decode(EpisodesDTO.self, from: data)
+                episodeList += episodeResult.results
+                
+                if let next = episodeResult.info.next {
+                    currentEndpoint = Endpoint(url: URL(string: next)!)
+                } else {
+                    currentEndpoint = nil
+                }
+                
+            } catch {
+                return .failure(.parsingError)
+            }
+            
         }
+        return .success(episodeList)
     }
     
     

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HTTPClientType {
-    func makeRequest(endpoint: Endpoint, baseUrl: String) async -> Result<Data, HTTPClientError>
+    func makeRequest(endpoint: Endpoint) async -> Result<Data, HTTPClientError>
 }

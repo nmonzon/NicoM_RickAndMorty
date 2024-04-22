@@ -29,7 +29,7 @@ class GetEpisodeListRepository: GetEpisodeListRepositoryType {
     func getEpisodeList() async -> Result<[EpisodeItem], HomeDomainError> {
         
         let episodeListResult = await episodeListDatasource.getEpisodeList()
-        let characterListResult = await characterListDatasource.getCharacterList()
+        //let characterListResult = await characterListDatasource.getCharacterList()
         
         guard case .success(let episodeList) = episodeListResult else {
             guard case .failure(let error) = episodeListResult else {
@@ -38,12 +38,12 @@ class GetEpisodeListRepository: GetEpisodeListRepositoryType {
             return .failure(episodeDomainErrorMapper.map(error: error))
 
         }
+        return .success(episodeDomainMapper.findCharactersWithEpisodes(for: [], episodes: episodeList))
+//        guard case .success(let characterList) = characterListResult else {
+//            return .success(episodeDomainMapper.findCharactersWithEpisodes(for: [], episodes: episodeList))
+//        }
         
-        guard case .success(let characterList) = characterListResult else {
-            return .success(episodeDomainMapper.findCharactersWithEpisodes(for: [], episodes: episodeList))
-        }
-        
-        return .success(episodeDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: episodeList))
+//        return .success(episodeDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: episodeList))
 
     }
     

@@ -1,9 +1,10 @@
-//
-//  SearchCharacterListTests.swift
-//  RickAndMortyTests
-//
-//  Created by Nicolas Monzon on 18/2/2024.
-//
+////
+////  SearchCharacterListTests.swift
+////  RickAndMortyTests
+////
+////  Created by Nicolas Monzon on 18/2/2024.
+////
+
 
 @testable import RickAndMorty
 import XCTest

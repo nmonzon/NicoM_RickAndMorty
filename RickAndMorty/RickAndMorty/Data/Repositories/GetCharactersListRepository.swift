@@ -31,12 +31,19 @@ class GetCharactersListRepository: GetCharacterListRepositoryType {
     }
     
     func getCharacterList() async -> Result<[CharacterItem], HomeDomainError> {
-        let characterListCache = await cacheDatasource.getCharacterList()
+        let characterListResult: Result<[CharacterDTO], HTTPClientError>
+        var characterListCache = await cacheDatasource.getCharacterList()
         
-        if !characterListCache.isEmpty {
-            return .success(characterListCache)
+        if !UserDefaults.standard.bool(forKey: Constants.appStates.loadMoreItems.rawValue) && !characterListCache.isEmpty {
+            if UserDefaults.standard.bool(forKey: Constants.appStates.appDidTerminate.rawValue) {
+                UserDefaults.standard.set(false, forKey: Constants.appStates.appDidTerminate.rawValue)
+                return .success(characterListCache)
+            }else {
+                return .success([])
+            }
         }
-        let characterListResult = await characterListDatasource.getCharacterList()
+        characterListResult = await characterListDatasource.getCharacterList()
+        
         let episodeListResult = await episodeListDatasource.getEpisodeList()
         guard case .success(let characterList) = characterListResult else {
             guard case .failure(let error) = characterListResult else {
@@ -50,6 +57,9 @@ class GetCharactersListRepository: GetCharacterListRepositoryType {
         }
         
         let characterListDomain = charactersDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: episodeList)
+        
+        UserDefaults.standard.set(false, forKey: Constants.appStates.loadMoreItems.rawValue)
+        characterListCache += characterListDomain
         await cacheDatasource.saveCharacterList(characterListDomain)
         
         return .success(characterListDomain)
@@ -59,19 +69,26 @@ class GetCharactersListRepository: GetCharacterListRepositoryType {
 
 extension GetCharactersListRepository: SearchCharacterListRepositoryType {
     func searchCharacter(characterName: String) async -> Result<[CharacterItem], HomeDomainError> {
-        let characterListResult = await getCharacterList()
         
+        let characterListResult: Result<[CharacterDTO], HTTPClientError>
+        
+        characterListResult = await characterListDatasource.getCharacterList(characterName: characterName)
+        
+        let episodeListResult = await episodeListDatasource.getEpisodeList()
         guard case .success(let characterList) = characterListResult else {
-            return characterListResult
+            guard case .failure(let error) = characterListResult else {
+                return .failure(.generic)
+            }
+            return .failure(characterDomainErrorMapper.map(error: error))
         }
         
-        guard characterName != "" else {
-            return .success(characterList)
+        guard case .success(let episodeList) = episodeListResult else {
+            return .success(charactersDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: []))
         }
         
-        let filteredCharacterList = characterList.filter { $0.name.lowercased().contains(characterName.lowercased()) }
+        let characterListDomain = charactersDomainMapper.findCharactersWithEpisodes(for: characterList, episodes: episodeList)
         
-        return .success(filteredCharacterList)
+        return .success(characterListDomain)
 
     }
 }

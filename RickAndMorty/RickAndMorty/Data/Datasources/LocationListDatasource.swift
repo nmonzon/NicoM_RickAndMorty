@@ -17,8 +17,8 @@ class LocationListDatasource: LocationListDatasourceType {
     
     func getLocationList() async -> Result<[LocationInfoDTO], HTTPClientError> {
         
-        let endpoint = Endpoint(path: "/location", queryParameters: [:], method: .get)
-        let requestResult = await httpClient.makeRequest(endpoint: endpoint, baseUrl: Endpoint.baseUrl)
+        let endpoint = Endpoint(url: URL(string: Constants.baseLocationUrl)!)
+        let requestResult = await httpClient.makeRequest(endpoint: endpoint)
         
         guard case .success(let data) = requestResult else {
             guard case .failure(let error) = requestResult else {

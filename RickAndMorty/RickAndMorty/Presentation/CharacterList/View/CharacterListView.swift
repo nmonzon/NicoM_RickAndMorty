@@ -33,8 +33,14 @@ struct CharacterListView: View {
                                         CharacterDetailView(characterDetailItem: item)
                                     } label: {
                                         CharacterView(item: item)
+                                            
                                     }
-                                    
+                                }
+                                if searchCharacter.isEmpty && !viewModel.items.isEmpty {
+                                    ProgressView().progressViewStyle(.circular)
+                                        .onAppear {
+                                            viewModel.loadMore()
+                                        }
                                 }
                             }
                             .padding(.horizontal)

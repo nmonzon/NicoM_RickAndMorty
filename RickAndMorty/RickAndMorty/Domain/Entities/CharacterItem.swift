@@ -22,6 +22,10 @@ struct CharacterItem: Identifiable, Codable {
     let url: String
     let created: String
     
+//    static func == (lhs: CharacterItem, rhs: CharacterItem) -> Bool {
+//        lhs.id == rhs.id
+//    }
+    
     func nonEmptyFields() -> [Field] {
             let mirror = Mirror(reflecting: self)
             return mirror.children.compactMap { child in

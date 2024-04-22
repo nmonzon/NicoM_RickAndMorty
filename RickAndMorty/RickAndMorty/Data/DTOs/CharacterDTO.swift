@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - Character
 struct CharactersDTO: Decodable {
+    let info: InfoDTO
     let results: [CharacterDTO]
 }
 

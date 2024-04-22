@@ -6,10 +6,16 @@
 //
 
 import Foundation
+import UIKit
 
 class CharactersFactory {
     static func create() -> CharacterListView {
-        CharacterListView(viewModel: createViewModel())
+        let viewModel = createViewModel()
+        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { _ in
+                    viewModel.saveAppState()
+                }
+        return CharacterListView(viewModel: viewModel)
+        
     }
     
     static private func createViewModel() -> CharacterListViewModel {
